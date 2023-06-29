@@ -11,6 +11,11 @@
     comment: "{{userId}} nologin User"
     createhome: "no"
     state: present
+    
+- name: Install deps
+  ansible.builtin.package:
+    name: tar
+    state: present
 
 - name: Install prometheus node exporter
   unarchive:
